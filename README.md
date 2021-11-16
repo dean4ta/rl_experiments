@@ -2,7 +2,9 @@
 
 This meta package contains ROS packages listed in the `.rosinstall` file to run a simulation and train an agent to control the inverted pendulum. Meant to be a sandbox for experimenting with reinforcement learning algorithms and techniques.
 
-![training_gif](images/training.gif)
+![training_gif](images/trained_model.gif)
+
+☝️ Training after ~600 episodes
 
 ## Prerequisites
 
@@ -35,6 +37,22 @@ Terminal 2
 $ source devel/setup.bash
 $ rosrun inverted_pendulum_rl_control train_ddpg.py
 ```
+
+## Saving and Loading Model
+
+Once training has produced a model, you can save it to a file at any time with the following command:
+
+    rosservice call /save_model "filename: 'model_name'"
+
+This command saves the model to the `inverted_pendulum_rl_control/models/` folder.
+
+You can load and evaluate a model with the following command:
+
+    roslaunch inverted_pendulum_rl_control eval.launch
+
+This repo contains an existing model that can be evaluated like so:
+
+    roslaunch inverted_pendulum_rl_control eval.launch rl_model_name:=trained_actor.pkl
 
 ## ROS Packages
 see [`.rosinstall`](.rosinstall) for packages included in this meta package.
