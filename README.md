@@ -9,6 +9,7 @@ This meta package contains ROS packages listed in the `.rosinstall` file to run 
 ## Prerequisites
 
  - [torch](https://pytorch.org/get-started/locally/) (cpu version is fine)
+ - [gym](https://gym.openai.com/docs/)
  - ROS Noetic recommended for Python3 support.
 
 ## Setup
