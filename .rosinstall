@@ -1,7 +1,7 @@
 - git:
     local-name: gazebo_ros_demos
     uri: https://github.com/dean4ta/gazebo_ros_demos
-    version: user/dean4ta/develop
+    version: user/dean4ta/feature/two-links
 - git:
     local-name: rl_control
     uri: https://github.com/dean4ta/inverted_pendulum_rl_control_ros.git
